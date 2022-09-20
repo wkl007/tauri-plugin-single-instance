@@ -10,11 +10,11 @@ rust-version = "1.57"
 [dependencies]
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
-tauri = { version = "1", features = ["api-all", "cli"] }
+tauri = { version = "1.1.1", features = ["api-all", "cli", "system-tray"] }
 tauri-plugin-single-instance = { path = "../../../" }
 
 [build-dependencies]
-tauri-build = { version = "1", features = [] }
+tauri-build = { version = "1.1.1", features = [] }
 
 [features]
 default = ["custom-protocol"]
