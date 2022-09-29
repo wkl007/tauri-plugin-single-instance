@@ -2,16 +2,16 @@
 name = "tauri-plugin-single-instance"
 description = "Ensure a single instance of your tauri app is running."
 version = "0.0.0"
-authors = [ "Tauri Programme within The Commons Conservancy" ]
+authors = ["Tauri Programme within The Commons Conservancy"]
 edition = "2021"
-rust-version = "1.57"
+rust-version = "1.60"
 exclude = ["/examples"]
 
 [dependencies]
 tauri = { version = "1" }
 
 [target.'cfg(target_os = "windows")'.dependencies.windows-sys]
-version = "0.36"
+version = "0.42"
 features = [
     "Win32_System_Threading",
     "Win32_System_DataExchange",
@@ -19,7 +19,7 @@ features = [
     "Win32_UI_WindowsAndMessaging",
     "Win32_Security",
     "Win32_System_LibraryLoader",
-    "Win32_Graphics_Gdi"
+    "Win32_Graphics_Gdi",
 ]
 
 [target.'cfg(target_os = "linux")'.dependencies]
